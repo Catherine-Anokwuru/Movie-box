@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  width: 100vw;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100vw;
+  max-width: 90rem;
+  height: 5rem;
+  flex-shrink: 0;
+  margin: auto;
+  padding: 0 5rem;
+
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+.nav-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+}
+
+.search-input {
+  font-family: DM Sans;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  border: none;
+  background-color: transparent;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-input::placeholder {
+  color: #fff;
+  border: none;
+  outline: none;
+}
+.search {
+    align-items: center;
+  display: flex;
+
+}
+nav form {
+  color: #fff;
+  display: flex;
+  width: 32.8125rem;
+  padding: 0.375rem 0.625rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.375rem;
+  border: 2px solid #d1d5db;
+}
+.menu{
+  display: inline-flex;
+align-items: center;
+gap: 1.6875rem;
+}
+.menu p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.menu button {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+/* HERO */
+.hero {
+  height: 75vh;
+  width: 100vw;
+}
+.landing {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../public/poster.jpeg), lightgray 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center 55%;
+  width: 100vw;
+  /* padding: 0 5rem; */
+}
