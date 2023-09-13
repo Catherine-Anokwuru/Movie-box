@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
   margin: auto;
 }
+section {
+  max-width: 90rem;
+  margin: auto;
+}
 
 /* NAV */
 nav {
@@ -109,12 +113,11 @@ nav form {
   background-position: center 55%;
   width: 100vw;
   /* overflow: hidden; */
-
 }
 .hero {
   height: 71vh;
   width: 100vw;
-max-width: 90rem;
+  max-width: 90rem;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -141,7 +144,6 @@ max-width: 90rem;
 .ratings {
   width: 11.5rem;
   height: 1.0625rem;
-
 }
 .imdb span {
   font-size: 0.75rem;
@@ -206,7 +208,7 @@ max-width: 90rem;
   border-radius: 0.375rem;
   background: #be123c;
   width: 10.6rem;
-height: 2.25rem;
+  height: 2.25rem;
 }
 .pagination-box {
   width: 2.25rem;
@@ -238,140 +240,173 @@ height: 2.25rem;
 
 /* MOVIES */
 
-.title{
+.title {
   display: flex;
   width: 100vw;
-max-width: 90rem;
-margin: auto;
-justify-content: space-between;
-align-items: center;
-font-family: DM Sans;
-padding-top: 4rem ;
-padding-bottom: 3rem;
+  max-width: 90rem;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  font-family: DM Sans;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
   padding-inline: 5rem;
-
 }
-.title h5{
+.title h5 {
   color: #000;
-font-size: 2.2rem;
-font-weight: 700;
-line-height: normal;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: normal;
 }
-.more{
+.more {
   display: flex;
-align-items: center;
-gap: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
 }
-.more p{
-  color:  #BE123C;
-font-size: 1.125rem;
-font-weight: 400;
-line-height: 1.5rem;
+.more p {
+  color: #be123c;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
-.more img{
+.more img {
   width: 1.25rem;
-height: 1.25rem;
+  height: 1.25rem;
 }
-.movie-list{
-  display: inline-flex;
-align-items: flex-start;
-gap: 5rem;
-font-family:  "DM Sans", sans-serif;
+.movie-list {
+  display: grid;
+  grid-template-columns: minmax(4, 1fr);
+  gap: 5rem;
+  font-family: "DM Sans", sans-serif;
   padding-inline: 5rem;
-
 }
-.movie-card{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 0.75rem;
-position: relative;
-}
-.card-poster{
-width: 15.625rem;
-height: 23.125rem;
-flex-shrink: 0;
-}
-.movie-rating{
-  display: inline-flex;
-justify-content: center;
-align-items: center;
-gap: 7.125rem;
-position: absolute;
-top: 3%;
-}
-.movie-rating :nth-child(1){
+.movie-card {
   display: flex;
-padding: 0.1875rem 0.5rem;
-align-items: flex-start;
-gap: 0.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  position: relative;
 }
-.movie-rating :nth-child(2){
+.card-poster {
+  width: 15.625rem;
+  height: 23.125rem;
+  flex-shrink: 0;
+}
+.movie-rating {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7.125rem;
+  position: absolute;
+  top: 3%;
+}
+.movie-rating :nth-child(1) {
+  display: flex;
+  padding: 0.1875rem 0.5rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+.movie-rating :nth-child(2) {
   width: 1.875rem;
-height: 1.82569rem;
-flex-shrink: 0;
+  height: 1.82569rem;
+  flex-shrink: 0;
 }
-.movie-rating-text :nth-child(1){
-color:  #9CA3AF;
-font-size: 0.75rem;
-font-weight: 700;
-line-height: normal;
+.movie-rating-text :nth-child(1) {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
 }
-.movie-rating-text :nth-child(2){
+.movie-rating-text :nth-child(2) {
   color: #111827;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.movie-rating-text p {
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.imdb-rt {
+  display: flex;
+  width: 15.625rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.imdb-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.imdb-rating img {
+  width: 2.1875rem;
+  height: 1.0625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imdb-rating p {
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}
+.rt-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.rt-rating img {
+  width: 1rem;
+  height: 1.0625rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rt-rating p {
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}
+.genre {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* FOOTER */
+.footer{
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 2.25rem;
+padding-bottom: 3rem;
+padding-top: 6rem;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.links {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.links p {
+  color: #111827;
+font-family: DM Sans;
 font-size: 1.125rem;
 font-weight: 700;
 line-height: normal;
 }
-.movie-rating-text p{
-color: #111827;
-font-size: 0.75rem;
-font-weight: 700;
-line-height: normal;
-}
-.imdb-rt{
-display: flex;
-width: 15.625rem;
-justify-content: space-between;
-align-items: flex-start;
-}
-.imdb-rating{
-display: flex;
-align-items: center;
-gap: 0.625rem;
-}
-.imdb-rating img{
-  width: 2.1875rem;
-height: 1.0625rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.imdb-rating p{
-  color: #111827;
-font-size: 0.75rem;
-font-weight: 400;
-line-height: 0.75rem;
-}
-.rt-rating{
-display: flex;
-align-items: center;
-gap: 0.625rem;
-}
-.rt-rating img{
-  width: 1rem;
-height: 1.0625rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.rt-rating p{
-  color: #111827;
-font-size: 0.75rem;
-font-weight: 400;
-line-height: 0.75rem;
-}
-.genre{
-color:  #9CA3AF;
-font-size: 0.75rem;
-font-weight: 700;
-line-height: normal;
+.copyright {
+  color: #6b7280;
+  font-family: DM Sans;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
 }

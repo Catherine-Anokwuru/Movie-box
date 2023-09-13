@@ -16,8 +16,8 @@ const Movies = () => {
         </div>
       </div>
       <div className="movie-list">
-        <div className="movie-card">
-          <div className="card-poster">
+        <div className="movie-card" data-testid='movie-card'>
+          <div className="card-poster" data-testid='movie-poster'>
             <img
               src={card}
               alt="Movie poster"
@@ -29,8 +29,8 @@ const Movies = () => {
             <img src={fav} alt="fav" />
           </div>
           <div className="movie-rating-text">
-            <p>USA, 2016 - Current</p>
-            <p>Stranger Things</p>
+            <p data-testid='movie-release-date'>USA, 2016 - Current</p>
+            <p data-testid='movie-title'>Stranger Things</p>
           </div>
           <div className="imdb-rt">
             <div className="imdb-rating">
