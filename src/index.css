@@ -173,8 +173,7 @@ nav form {
 .rt img {
   width: 1rem;
   height: 1.0625rem;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
   background-color: lightgray 50%;
 }
 .rt {
@@ -275,7 +274,7 @@ nav form {
 }
 .movie-list {
   display: grid;
-  grid-template-columns: minmax(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
   font-family: "DM Sans", sans-serif;
   padding-inline: 5rem;
@@ -290,27 +289,34 @@ nav form {
 .card-poster {
   width: 15.625rem;
   height: 23.125rem;
+}
+.card-poster img {
+  width: 15.625rem;
+  height: 23.125rem;
   flex-shrink: 0;
+  object-fit: cover;
 }
 .movie-rating {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 7.125rem;
-  position: absolute;
-  top: 3%;
-}
-.movie-rating :nth-child(1) {
   display: flex;
-  padding: 0.1875rem 0.5rem;
-  align-items: flex-start;
-  gap: 0.625rem;
-}
-.movie-rating :nth-child(2) {
   width: 1.875rem;
   height: 1.82569rem;
   flex-shrink: 0;
+  position: absolute;
+  top: 3%;
+  left: 80%;
 }
+/* .movie-rating :nth-child(1) {
+  display: flex;
+  padding: 0.1875rem 0.5rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.625rem;
+} */
+/* .movie-rating :nth-child(2) {
+  width: 1.875rem;
+  height: 1.82569rem;
+  flex-shrink: 0;
+} */
 .movie-rating-text :nth-child(1) {
   color: #9ca3af;
   font-size: 0.75rem;
@@ -377,14 +383,14 @@ nav form {
 }
 
 /* FOOTER */
-.footer{
+.footer {
   display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 2.25rem;
-padding-bottom: 3rem;
-padding-top: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  padding-bottom: 3rem;
+  padding-top: 6rem;
 }
 .social {
   display: flex;
@@ -398,10 +404,10 @@ padding-top: 6rem;
 }
 .links p {
   color: #111827;
-font-family: DM Sans;
-font-size: 1.125rem;
-font-weight: 700;
-line-height: normal;
+  font-family: DM Sans;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
 }
 .copyright {
   color: #6b7280;
