@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="navbar">
       <div className="logo">
         <img src={logo} alt="logo" className="nav-img" />
         <p className="nav-text">MovieBox</p>
