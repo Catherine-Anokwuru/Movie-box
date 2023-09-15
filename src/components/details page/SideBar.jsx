@@ -4,7 +4,6 @@ import movies from "../../assets/Movie Projector.png";
 import series from "../../assets/TV Show.png";
 import upcoming from "../../assets/Calendar.png";
 import logout from "../../assets/Logout.png";
-import logout from "../../assets/Logout.png";
 
 const SideBar = () => {
   return (
