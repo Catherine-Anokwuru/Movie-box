@@ -3,9 +3,11 @@ import imdb from '../assets/imdb.png'
 import rt from '../assets/rottentom.png'
 import play from '../assets/Play.svg'
 import rect from '../assets/Rectangle 1.png'
-
+import Footer from "./Footer";
+import Movies from "./Movies";
 const Homepage = () => {
   return (
+    <>
     <div className="landing">
       <Nav />
       <section className="hero">
@@ -32,7 +34,7 @@ const Homepage = () => {
             <p>Watch trailer</p>
           </button>
         </div>
-        <div className="pagination-box">
+        {/* <div className="pagination-box">
           <img src={rect} alt="rectangle" className="rect" />
 
           <div className="pagination">
@@ -42,9 +44,14 @@ const Homepage = () => {
             <p>4</p>
             <p>5</p>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
+     <Movies />
+      <Footer />
+      {/* <MovieDetails/> */}
+
+    </>
   );
 };
 export default Homepage;

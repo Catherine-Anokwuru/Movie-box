@@ -1,5 +1,4 @@
 import logo from "../assets/tv.png";
-import search from "../assets/Search.svg";
 import accordion from "../assets/Menu.png";
 import { FaSearch } from "react-icons/fa";
 
