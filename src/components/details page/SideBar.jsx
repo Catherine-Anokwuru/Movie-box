@@ -31,13 +31,13 @@ const SideBar = () => {
             <p>Upcoming</p>
           </div>
         </div>
-        <div className="quiz">
+        {/* <div className="quiz">
           <p>Play movie quizes and earn free tickets</p>
           <small>50k people are playing now</small>
           <div>
             <small>Start playing</small>
           </div>
-        </div>
+        </div> */}
         <div className="logout">
           <img src={logout} alt="Logout" />
           <p>Log out</p>

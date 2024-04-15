@@ -1,22 +1,40 @@
-import chevron from "../assets/Chevron right.svg";
-import card from "../assets/Poster Image.png";
 import fav from "../assets/Favorite.png";
-import series from "../assets/TV Series.png";
 import imdb from "../assets/imdb.png";
 import rt from "../assets/rottentom.png";
 import fetchMovies from "./fetchMovies";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Movies = () => {
-  const { loading, movies } = fetchMovies();
+  const { loading, movies, currentPage, setCurrentPage } =
+    fetchMovies();
+
+  const nextPage = () => {
+    if (currentPage < 20) {
+      setCurrentPage(currentPage + 1);
+    } else if (currentPage === 20) {
+      setCurrentPage(20);
+    }
+    // localStorage.setItem("page", currentPage);
+  };
+
+  const prevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    } else if (currentPage === 20) {
+      setCurrentPage(1);
+    }
+    // localStorage.setItem("page", currentPage);
+  };
 
   return (
     <section>
       <div className="title">
         <h5>Featured Movie</h5>
-        <div className="more">
+        {/* <div className="more">
           <p>See more</p>
           <img src={chevron} alt="chevron" />
-        </div>
+        </div> */}
       </div>
       {loading ? (
         <div className="loading"></div>
@@ -27,7 +45,13 @@ const Movies = () => {
               movie;
 
             return (
-              <>
+              <Link
+                key={id}
+                to={`/${id}`}
+                onClick={() => {
+                  localStorage.setItem("id", id);
+                }}
+              >
                 <div
                   className="movie-card"
                   key={id}
@@ -39,7 +63,7 @@ const Movies = () => {
                   >
                     <img
                       src={`https://image.tmdb.org/t/p/original/${img}`}
-                      alt={title} 
+                      alt={title}
                     />
                   </div>
                   <div className="movie-rating">
@@ -62,15 +86,60 @@ const Movies = () => {
                       <p>{popular}%</p>
                     </div>
                   </div>
-                  <div className="genre">
+                  {/* <div className="genre">
                     <p>Action, Adventure, Horror</p>
-                  </div>
+                  </div> */}
                 </div>
-              </>
+              </Link>
             );
           })}
         </div>
       )}
+      <div className="page">
+        <div
+          onClick={prevPage}
+          disabled={currentPage === 1}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            cursor: "pointer",
+            color: currentPage === 1 && "gray",
+          }}
+        >
+          <p
+            style={{
+              display: "inline-block",
+              paddingRight: "1rem",
+              fontWeight: 600,
+            }}
+          >
+            Prev
+          </p>
+          <FaArrowLeft />
+        </div>
+        <div
+          onClick={nextPage}
+          disabled={currentPage === 20}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            cursor: "pointer",
+            color: currentPage === 20 && "gray",
+          }}
+        >
+          <FaArrowRight />
+          <p
+            style={{
+              display: "inline-block",
+              paddingLeft: "1rem",
+              fontWeight: 600,
+            }}
+          >
+            Next
+          </p>
+        </div>
+      </div>
+      <p className="page-text">Page {currentPage} of 20</p>
     </section>
   );
 };

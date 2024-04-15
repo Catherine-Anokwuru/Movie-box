@@ -1,52 +1,83 @@
 import SideBar from "./SideBar";
-import trailer from "../../assets/trailer.png";
 import down from "../../assets/chevron down.png";
+import fetchMovieDetails from "./fetchMovieDetails";
+import ReactPlayer from "react-player";
+
 const MovieDetails = () => {
+  const id = localStorage.getItem("id");
+  const { movieDetails, loading, trailerKey } = fetchMovieDetails(id);
+
+  if (loading) {
+    return <div className="loading"></div>;
+  }
+
+  const { title, overview, runtime, release_date, genres, adult } =
+    movieDetails;
+  const h = (runtime / 60).toFixed(0);
+  const min = runtime % 60;
+  const date = release_date.slice(0, 4);
+
   return (
-    <main>
+    <main className="main-details">
       <SideBar />
-      <section>
-        <div>
-          <img src={trailer} alt="" />
-        </div>
+      <section className="details-section">
+        {trailerKey && (
+          <div
+            className="video-player"
+            style={{ borderRadius: "20px" }}
+          >
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${trailerKey}`}
+              width={"100%"}
+              height={"100%"}
+              style={{ borderRadius: "20px" }}
+              controls
+            />
+          </div>
+        )}
         <div className="movie-details">
           <div>
             <div className="overview">
-              <p>Top Gun: Maverick • 2022 • PG-13 • 2h 10m</p>
-              <small>Action</small>
-              <small>Drama</small>
-            </div>
-            <div>
               <p>
-                After thirty years, Maverick is still pushing the
-                envelope as a top naval aviator, but must confront
-                ghosts of his past when he leads TOP GUN's elite
-                graduates on a mission that demands the ultimate
-                sacrifice from those chosen to fly it.
+                {title} • {date} • {adult ? "PG-18" : "PG-13"} •{" "}
+                {`${h}hr ${min}min`}
               </p>
+              <div className="small">
+                {genres.map((item, index) => {
+                  return <small key={index}>{item.name}</small>;
+                })}
+              </div>
+            </div>
+            <div className="overview-text">
+              <p>{overview}</p>
             </div>
             <div className="crew">
-              <p>Director : Joseph Kosinski</p>
-              <p>Writers : Jim Cash, Jack Epps Jr, Peter Craig</p>
               <p>
-                Stars : Tom Cruise, Jennifer Connelly, Miles Teller
+                Director : <span> Joseph Kosinski</span>{" "}
+              </p>
+              <p>
+                Writers :
+                <span>Jim Cash, Jack Epps Jr, Peter Craig</span>
+              </p>
+              <p>
+                Stars :
+                <span>
+                  Tom Cruise, Jennifer Connelly, Miles Teller
+                </span>
               </p>
             </div>
             <div className="awards">
-              <p>Top rated movie #65</p>
-              <p>Awards 9 nominations</p>
+              <div>
+                <p>Top rated movie #65</p>
+                <p>Awards 9 nominations</p>
+              </div>
               <img src={down} alt="chevron down" />
             </div>
-          </div>
-          <div className="right-tab">
-
-          <div className="bookmark-icons">
-
-          </div>
           </div>
         </div>
       </section>
     </main>
   );
 };
+
 export default MovieDetails;
