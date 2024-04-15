@@ -6,7 +6,7 @@ function App() {
   const { movies } = fetchMovies();
 
   return (
-    <BrowserRouter basename={`movies`}>
+    <BrowserRouter>
       <Routes>
         <Route path={"/"} element={<Homepage />} />
         {movies.map((movie) => (
