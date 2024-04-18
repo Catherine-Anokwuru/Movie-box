@@ -4,6 +4,7 @@ import movies from "../../assets/Movie Projector.png";
 import series from "../../assets/TV Show.png";
 import upcoming from "../../assets/Calendar.png";
 import logout from "../../assets/Logout.png";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -14,10 +15,13 @@ const SideBar = () => {
           <p>MovieBox</p>
         </div>
         <div className="sidebar-menu">
-          <div className="s-menu">
-            <img src={home} alt="Home" />
-            <p>Home</p>
-          </div>
+          <Link to={"/"}>
+            <div className="s-menu">
+              <img src={home} alt="Home" />
+              <p>Home</p>
+            </div>
+          </Link>
+
           <div className="s-menu">
             <img src={movies} alt="movies" />
             <p>Movies</p>

@@ -816,7 +816,9 @@ section {
   color: #b91c1c;
   font-size: 0.9375rem;
   font-weight: 500;
-  width: 5.25rem;
+  min-width: 5.25rem;
+  width: max-content;
+  padding-inline: 0.5rem;
   height: 1.875rem;
   border-radius: 0.9375rem;
   border: 1px solid #f8e7eb;

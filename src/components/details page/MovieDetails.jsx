@@ -5,17 +5,27 @@ import ReactPlayer from "react-player";
 
 const MovieDetails = () => {
   const id = localStorage.getItem("id");
-  const { movieDetails, loading, trailerKey } = fetchMovieDetails(id);
+  const { movieDetails, loading, trailerKey, people } =
+    fetchMovieDetails(id);
 
   if (loading) {
     return <div className="loading"></div>;
   }
 
+  const { writers, director, cast } = people;
+  const writerNames = () => {
+    const writer = writers.map((data) => data.name);
+    return writer.join(" , ");
+  };
+  const names = writerNames();
+
+  const actors = cast.join(" , ");
+
   const { title, overview, runtime, release_date, genres, adult } =
     movieDetails;
   const h = (runtime / 60).toFixed(0);
   const min = runtime % 60;
-  const date = release_date.slice(0, 4);
+  const date = release_date?.slice(0, 4);
 
   return (
     <main className="main-details">
@@ -53,26 +63,22 @@ const MovieDetails = () => {
             </div>
             <div className="crew">
               <p>
-                Director : <span> Joseph Kosinski</span>{" "}
+                Director :&nbsp;<span> {director.name}</span>
               </p>
               <p>
-                Writers :
-                <span>Jim Cash, Jack Epps Jr, Peter Craig</span>
+                Writers :&nbsp;<span>{names}</span>
               </p>
               <p>
-                Stars :
-                <span>
-                  Tom Cruise, Jennifer Connelly, Miles Teller
-                </span>
+                Stars :&nbsp;<span>{actors}</span>
               </p>
             </div>
-            <div className="awards">
+            {/* <div className="awards">
               <div>
                 <p>Top rated movie #65</p>
                 <p>Awards 9 nominations</p>
               </div>
               <img src={down} alt="chevron down" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
