@@ -19,7 +19,7 @@ const MovieDetails = () => {
   };
   const names = writerNames();
 
-  const actors = cast.join(" , ");
+  const actors = cast?.join(" , ");
 
   const { title, overview, runtime, release_date, genres, adult } =
     movieDetails;
@@ -53,7 +53,7 @@ const MovieDetails = () => {
                 {`${h}hr ${min}min`}
               </p>
               <div className="small">
-                {genres.map((item, index) => {
+                {genres?.map((item, index) => {
                   return <small key={index}>{item.name}</small>;
                 })}
               </div>
