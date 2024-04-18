@@ -1,7 +1,7 @@
 # **Movie Box**
 
 ## **Overview**
-This website is a movie recommendation platform inspired by the HNG internship. It's designed to incorporate concepts such as routing, state management, and video streaming. The site features details about top-rated movies sourced from the TMDB API.
+This website is a movie recommendation platform inspired by the HNG internship. It's designed to incorporate concepts such as routing, state management, and video streaming. The site features details about top-rated movies sourced from the [TMDB API](https://www.themoviedb.org/).
 
 ## **Features**
  You can find the features available in this app below
