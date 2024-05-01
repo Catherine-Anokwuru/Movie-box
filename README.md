@@ -1,8 +1,10 @@
 # **Movie Box**
 
-![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=blue)
-![Static Badge](https://img.shields.io/badge/React_Router-white?style=for-the-badge&logo=react%20router)
-![Static Badge](https://img.shields.io/badge/Axios-blue?style=for-the-badge&logo=axios)
+![Static Badge](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue&logoSize=auto&link=https%3A%2F%2Freact.dev%2F)
+![Static Badge](https://img.shields.io/badge/react%20router-red?style=for-the-badge&logo=react%20router&logoColor=black&logoSize=auto&link=https%3A%2F%2Freactrouter.com%2Fen%2Fmain)
+![Static Badge](https://img.shields.io/badge/axios-blue?style=for-the-badge&logo=axios&link=https%3A%2F%2Faxios-http.com%2Fdocs%2Fintro)
+![Static Badge](https://img.shields.io/badge/tmdb_API-white?style=for-the-badge&logo=the%20movie%20database&logoColor=black&logoSize=auto&link=https%3A%2F%2Fdeveloper.themoviedb.org%2Freference%2Fintro%2Fgetting-started)
+
 
 
 ## **Overview**
