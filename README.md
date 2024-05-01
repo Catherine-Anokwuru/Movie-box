@@ -1,5 +1,10 @@
 # **Movie Box**
 
+![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=blue)
+![Static Badge](https://img.shields.io/badge/React_Router-white?style=for-the-badge&logo=react%20router)
+![Static Badge](https://img.shields.io/badge/Axios-blue?style=for-the-badge&logo=axios)
+
+
 ## **Overview**
 This website is a movie recommendation platform inspired by the HNG internship. It's designed to incorporate concepts such as routing, state management, and video streaming. The site features details about top-rated movies sourced from the [TMDB API](https://www.themoviedb.org/).
 
