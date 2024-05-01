@@ -1,9 +1,9 @@
 # **Movie Box**
 
-![Static Badge](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue&logoSize=auto&link=https%3A%2F%2Freact.dev%2F)
-![Static Badge](https://img.shields.io/badge/react%20router-red?style=for-the-badge&logo=react%20router&logoColor=black&logoSize=auto&link=https%3A%2F%2Freactrouter.com%2Fen%2Fmain)
-![Static Badge](https://img.shields.io/badge/axios-blue?style=for-the-badge&logo=axios&link=https%3A%2F%2Faxios-http.com%2Fdocs%2Fintro)
-![Static Badge](https://img.shields.io/badge/tmdb_api-grey?style=for-the-badge&logo=the%20movie%20database&logoColor=white&logoSize=auto&link=https%3A%2F%2Fdeveloper.themoviedb.org%2Freference%2Fintro%2Fgetting-started)
+[![Static Badge](https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue&logoSize=auto&link=https%3A%2F%2Freact.dev%2F)](https://react.dev/)
+[![Static Badge](https://img.shields.io/badge/react%20router-red?style=for-the-badge&logo=react%20router&logoColor=black&logoSize=auto&link=https%3A%2F%2Freactrouter.com%2Fen%2Fmain)](https://reactrouter.com/)
+[![Static Badge](https://img.shields.io/badge/axios-blue?style=for-the-badge&logo=axios&link=https%3A%2F%2Faxios-http.com%2Fdocs%2Fintro)](https://axios-http.com/docs/intro)
+[![Static Badge](https://img.shields.io/badge/tmdb_api-grey?style=for-the-badge&logo=the%20movie%20database&logoColor=white&logoSize=auto&link=https%3A%2F%2Fdeveloper.themoviedb.org%2Freference%2Fintro%2Fgetting-started)](https://developer.themoviedb.org/reference/intro/getting-started)
 
 
 
